@@ -53,6 +53,7 @@ public class FileUploadBootstrap {
                 log.error("客户端处理出现异常------------", e);
             }
         }
+        log.info("[{}] 上传完成", Thread.currentThread().getName());
     }
 
 }
