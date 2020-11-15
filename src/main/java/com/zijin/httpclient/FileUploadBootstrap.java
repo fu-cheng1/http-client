@@ -18,6 +18,8 @@ import java.util.function.Consumer;
  */
 public class FileUploadBootstrap {
 
+    static ForkJoinPool forkJoinPool = new ForkJoinPool();
+
     private static final Logger log = LoggerFactory.getLogger(FileUploadBootstrap.class);
 
     private final FilePathDatasource filePathDatasource;
@@ -33,7 +35,6 @@ public class FileUploadBootstrap {
     public void start(Consumer<List<Payload>> consumer) throws ExecutionException, InterruptedException {
         int begin = 0;
         List<Payload> filePath;
-        ForkJoinPool forkJoinPool = new ForkJoinPool();
 
         while ((filePath = filePathDatasource.getFilePath(begin)) != null && filePath.size() > 0) {
             int size = filePath.size();
