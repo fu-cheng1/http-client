@@ -86,7 +86,7 @@ public class UploadTest extends RecursiveTask<List<Payload>> implements Runnable
 
 
     public static String upload(File file) throws Exception {
-//        HttpPost httpPost = new HttpPost("https://open.teewon.net:9009/twasp/fs/v2/upload/");
+//        HttpPost httpPost = new HttpPost("url");
 //        httpPost.addHeader("Access-Token", "812e48d06f6f398bd6afdacff0b68a09");
 //        httpPost.addHeader("branchCode", "TWSMECR");
 //
